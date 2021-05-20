@@ -20,10 +20,6 @@ exports.csrfMiddleware = (req, res, next) => {
   res.locals.csrfToken = req.csrfToken();
   next();
 };
-//MONGODB   gilvansantos   218386gilvan
-
-//mongodb+srv://gilvansantos:<password>@cluster0.dseck.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-
 
 exports.loginRequired = (req, res, next) =>  {
   if(!req.session.user){
@@ -33,3 +29,7 @@ exports.loginRequired = (req, res, next) =>  {
   }
   next();
 };
+
+//MONGODB   gilvansantos   218386gilvan
+
+//mongodb+srv://gilvansantos:<password>@cluster0.dseck.mongodb.net/myFirstDatabase?retryWrites=true&w=majority

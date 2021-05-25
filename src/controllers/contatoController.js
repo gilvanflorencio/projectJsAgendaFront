@@ -62,7 +62,7 @@ exports.delete = async function(req, res) {
   const contato = await Contato.delete(req.params.id);
   if(!contato)  return res.render('404');
 
-  req.flash('sucess', 'Contato apagado com sucesso.');
+  req.flash('success', 'Contato apagado com sucesso.');
   req.session.save(() => res.redirect('back'));
   return;
 };
